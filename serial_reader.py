@@ -1,6 +1,7 @@
 
 import serial
 import time
+import csv
 
 device = '/dev/ttyACM0'
 baudrate = 115200 # or whatever you use
@@ -16,6 +17,10 @@ arduino_port = serial.Serial (device,
                               timeout  = 0)
 print('reading data...')
 time.sleep(3)
-while True:
-  line = arduino_port.readline ()
-  print(line)
+with open('heart_rate_data.csv', 'w', newline=' ') as file:
+  while True:
+    writer = csv.writer(file)
+    line = arduino_port.readline ()
+    writer.writerow([line])
+
+
