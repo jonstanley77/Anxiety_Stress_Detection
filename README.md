@@ -8,7 +8,7 @@ All of the sketches run in the Arudino IDE
 
 ##HeartBeat
 
-Detects heart rate in BPS with Polar T34 heart rate band, this is wireless and connect to a sensor on the board
+Detects heart rate in BPS with Polar T34 heart rate band, this is wireless and connects to the wirelss receiver sensor on the Arduino board
 
 ##ECG
 
