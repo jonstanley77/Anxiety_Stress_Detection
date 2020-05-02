@@ -5,17 +5,17 @@ import serial
 import time
 
 start = time.time()
-duration = 20
+duration = 20 #specify how long you would like the code the run
 
 print("modules start")
 print(serial.__file__)
 print("modules end")
 
-data_type = input("what data is this? :")
+data_type = input("what data is this? :") #specify what csv file you are saving to 
 
 try:
-    # open the serial port; only do this once as most arduinos reset when the serial port is opened
-    ser = serial.Serial('/dev/ttyACM0', baudrate=9600)
+    # open the serial port, you will have to change this line; only do this once as most arduinos reset when the serial port is opened
+    ser = serial.Serial('/dev/ttyACM0', baudrate=9600) #baudrate must match the one in your arduino IDE
     # e.g. remove remains of Arduino bootloader or old data while the application was not running
     # not sure yet if it's 100% reliable; robin's approach is probably safer
     ser.flushInput()
